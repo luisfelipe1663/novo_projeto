@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #262626;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.topo img {
+    width: 100px;
+}
+
+/*HOME*/
+.banner {
+    width: 100%;
+}
+
+/*SERVIÇOS HOME*/
+.titulo-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin: 10px;
+}
+
+.caixa-servico_home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+
+    border-top: #f26b2b solid 1px;
+    border-bottom: #f26b2b solid 1px;
+    padding: 15px 0;
+    margin: 20px;
+}
+
+.caixa-servico_home>div {
+    min-height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caixa-servico_home p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+    text-align: center;
+
+    font-size: 12px;
+    color: #fff;
+    padding: 10px;
+    max-width: 110px;
+}
+
+.caixa-servico_home p img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.caixa-esquerda {
+    border-left: solid 0.5px #fff;
+    border-right: solid 0.5px #fff;
+}
+
+.caixa-direita {
+    border-right: solid 0.5px #fff;
+}
+
+/*SOBRE NOS HOME*/
+.sobrenos-home img {
+    width: 250px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.text_sobrenos {
+    max-width: 250px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 10px;
+    border-left: solid 3.5px #6E07DC;
+}
+
+.text_sobrenos button {
+    margin-top: 5px;
+
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f26b2b;
+    color: #fff;
+}
+
+.caixa-planos_home {
+    background-color: #fff;
+    margin-top: 50px;
+    padding: 20px 0;
+}
+
+.caixa-planos_home h2 {
+    text-align: center;
+}
+
+.planos {
+    display: flex;
+    gap: 50px;
+    padding: 15px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.planos h3 {
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.planos::-webkit-scrollbar {
+    display: none;
+}
+
+.planos img {
+    width: 150px;
+    border-bottom: #929292 solid 1px;
+}
+
+.planos button {
+    border: none;
+    border-radius: 10px;
+    background-color: #929292;
+    font-size: 15px;
+    color: #fff;
+    padding: 8px 14px;
+}
+
+.plano_basico,
+.plano_avancado,
+.plano_premium {
+    min-width: 75%;
+    flex-shrink: 0;
+
+    border-radius: 30px;
+    border: #8d8d8d solid 0.8px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    gap: 10px;
+
+    scroll-snap-align: center;
+    height: 300px;
+}
+
+.plano_avancado h3 {
+    color: #6E07DC;
+}
+
+.plano_premium h3 {
+    color: #f26b2b;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+    .planos {
+        justify-content: center;
+        overflow-x: visible;
+    }
+
+    .plano_basico,
+    .plano_avancado,
+    .plano_premium {
+        min-width: auto;
+        width: 250px;
+
+    }
+}
+
+.baixo {
+
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+
+    width: 150px;
+    height: 150px;
+    padding: 50px;
+
+    border: 3px solid #6E07DC;
+    /* roxo */
+    border-radius: 200px;
+}
+
+.baixe_app img {
+    padding: 15px;
+    width: 250px;
+}
+.roxo{
+    color: #9747ff;
+}
+.laranja{
+    color: #f26807;
+}
+.topo {
+    height: 60px;
+    background-color: #262626;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 20px;
+
+    border-bottom: 3px solid #f26b2b;
+}
+
+.logo-topo {
+    width: 100px;
+}
+
+/* MENU NORMAL (desktop) */
+#menu {
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+}
+
+#menu ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+#menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* esconder botão hamburguer no desktop */
+.menu-toggle {
+    display: none;
+}
+
+.close-menu {
+    display: none;
+}
+@media (max-width: 500px) {
+
+    /* mostrar hamburguer */
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* esconder menu padrão */
+    #menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+
+        background-color: #262626;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        transition: 0.3s;
+        z-index: 1000;
+    }
+
+    #menu ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #menu ul li a {
+        font-size: 22px;
+    }
+
+    .close-menu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* quando abre */
+    #menu.active {
+        right: 0;
+    }
+}
+@media (min-width:500px) {
+    .sobrenos-home img {
+        width: 300px;
+    }
+
+    .text_sobrenos {
+        padding: 15px;
+        font-size: 15px;
+    }
+
+    .text_sobrenos button {
+        margin-top: 5px;
+    }
+
+    .baixe_app img {
+        margin-top: 10px;
+    }
+}
