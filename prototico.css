@@ -10,7 +10,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-h2, p {
+h2,
+p {
     font-family: inherit;
 }
 
@@ -54,7 +55,7 @@ h2, p {
     margin: 20px;
 }
 
-.caixa-servico_home > div {
+.caixa-servico_home>div {
     min-height: 120px;
     display: flex;
     justify-content: center;
@@ -210,8 +211,13 @@ h2, p {
     padding: 15px;
 }
 
-.roxo { color: #9747ff; }
-.laranja { color: #f26807; }
+.roxo {
+    color: #9747ff;
+}
+
+.laranja {
+    color: #f26807;
+}
 
 /* MENU DESKTOP */
 #menu {
@@ -310,7 +316,7 @@ h2, p {
         gap: 50px;
     }
 
-    .caixa-servico_home > div {
+    .caixa-servico_home>div {
         width: 150px;
         text-align: center;
         border-left: 1px solid #fff;
@@ -352,5 +358,32 @@ h2, p {
         font-size: 15px;
         margin-top: 10px;
     }
-}
 
+    .baixo {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 90px;
+        gap: 50px;
+    }
+}
+@media(min-width:1000px) {
+    .caixa-servico_home{
+        
+        width: 90%;
+    }
+     .caixa-servico_home>div {
+        width: 20%;
+        
+   }
+   .caixa-servico_home p{
+    font-size: 15px;
+   }
+   .caixa-servico_home p img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+    
+}
