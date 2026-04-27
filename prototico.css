@@ -1,31 +1,42 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
 }
 
+/* BASE */
 body {
     background-color: #262626;
-}
-
-h2 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-p {
-    font-family: Arial, Helvetica, sans-serif;
+h2, p {
+    font-family: inherit;
 }
 
-.topo img {
+/* TOPO */
+.topo {
+    height: 60px;
+    background-color: #262626;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: 3px solid #f26b2b;
+}
+
+.topo img,
+.logo-topo {
     width: 100px;
 }
 
-/*HOME*/
+/* HOME */
 .banner {
     width: 100%;
     margin-top: 20px;
 }
 
-/*SERVIÇOS HOME*/
+/* SERVIÇOS HOME */
 .titulo-home {
     display: flex;
     justify-content: center;
@@ -37,15 +48,13 @@ p {
 .caixa-servico_home {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0;
-
     border-top: #f26b2b solid 1px;
     border-bottom: #f26b2b solid 1px;
     padding: 15px 0;
     margin: 20px;
 }
 
-.caixa-servico_home>div {
+.caixa-servico_home > div {
     min-height: 120px;
     display: flex;
     justify-content: center;
@@ -57,10 +66,8 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     gap: 8px;
     text-align: center;
-
     font-size: 12px;
     color: #fff;
     padding: 10px;
@@ -74,34 +81,34 @@ p {
 }
 
 .caixa-esquerda {
-    border-left: solid 0.5px #fff;
-    border-right: solid 0.5px #fff;
+    border-left: 0.5px solid #fff;
+    border-right: 0.5px solid #fff;
 }
 
 .caixa-direita {
-    border-right: solid 0.5px #fff;
+    border-right: 0.5px solid #fff;
 }
 
-/*SOBRE NOS HOME*/
+/* SOBRE NÓS HOME */
 .sobrenos-home {
     display: flex;
     flex-direction: column;
 }
+
 .sobrenos-home img {
     width: 250px;
+    margin: 20px 0;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
-    margin-bottom: 20px;
-    margin-top: 20px;
 }
 
 .text_sobrenos {
     width: 250px;
     background-color: rgba(255, 255, 255, 0.5);
+    border-left: 3.5px solid #6E07DC;
     border-radius: 10px;
     margin: 0 auto;
     padding: 10px;
-    border-left: solid 3.5px #6E07DC;
 }
 
 .text_sobrenos button {
@@ -113,6 +120,7 @@ p {
     color: #fff;
 }
 
+/* PLANOS */
 .caixa-planos_home {
     background-color: #fff;
     margin-top: 50px;
@@ -128,24 +136,22 @@ p {
     gap: 50px;
     padding: 15px;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-}
-
-.planos h3 {
-    font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .planos::-webkit-scrollbar {
     display: none;
 }
 
+.planos h3 {
+    font-size: 25px;
+}
+
 .planos img {
     width: 150px;
-    border-bottom: #929292 solid 1px;
+    border-bottom: 1px solid #929292;
 }
 
 .planos button {
@@ -161,22 +167,18 @@ p {
 .plano_avancado,
 .plano_premium {
     min-width: 75%;
+    height: 300px;
     flex-shrink: 0;
-
     border-radius: 30px;
-    border: #8d8d8d solid 0.8px;
+    border: 0.8px solid #8d8d8d;
     padding: 20px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     text-align: center;
     gap: 10px;
-
     scroll-snap-align: center;
-    height: 300px;
 }
 
 .plano_avancado h3 {
@@ -187,57 +189,31 @@ p {
     color: #f26b2b;
 }
 
-/* DESKTOP */
-
-
+/* BAIXO / APP */
 .baixo {
-
     margin: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 .logo img {
-
     width: 150px;
     height: 150px;
     padding: 50px;
-
     border: 3px solid #6E07DC;
-    /* roxo */
     border-radius: 200px;
 }
 
 .baixe_app img {
-    padding: 15px;
     width: 250px;
-}
-.roxo{
-    color: #9747ff;
-}
-.laranja{
-    color: #f26807;
-}
-.topo {
-    height: 60px;
-    background-color: #262626;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 0 20px;
-
-    border-bottom: 3px solid #f26b2b;
+    padding: 15px;
 }
 
-.logo-topo {
-    width: 100px;
-}
+.roxo { color: #9747ff; }
+.laranja { color: #f26807; }
 
-/* MENU NORMAL (desktop) */
+/* MENU DESKTOP */
 #menu {
     position: static;
     width: auto;
@@ -257,17 +233,13 @@ p {
     font-size: 16px;
 }
 
-/* esconder botão hamburguer no desktop */
-.menu-toggle {
-    display: none;
-}
-
+.menu-toggle,
 .close-menu {
     display: none;
 }
-@media (max-width: 500px) {
 
-    /* mostrar hamburguer */
+/* RESPONSIVO */
+@media (max-width: 500px) {
     .menu-toggle {
         display: block;
         font-size: 30px;
@@ -275,21 +247,17 @@ p {
         cursor: pointer;
     }
 
-    /* esconder menu padrão */
     #menu {
         position: fixed;
         top: 0;
         right: -100%;
         width: 70%;
         height: 100vh;
-
         background-color: #262626;
-
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-
         transition: 0.3s;
         z-index: 1000;
     }
@@ -313,12 +281,12 @@ p {
         cursor: pointer;
     }
 
-    /* quando abre */
     #menu.active {
         right: 0;
     }
 }
-@media (min-width:500px) {
+
+@media (min-width: 500px) {
     .sobrenos-home img {
         width: 300px;
     }
@@ -328,34 +296,29 @@ p {
         font-size: 15px;
     }
 
-    .text_sobrenos button {
-        margin-top: 5px;
-    }
-
     .baixe_app img {
         margin-top: 10px;
     }
 }
-@media (min-width: 768px){
-    .caixa-servico_home{
+
+@media (min-width: 768px) {
+    .caixa-servico_home {
         width: 700px;
         margin: 0 auto;
         display: flex;
         justify-content: center;
         gap: 50px;
-       
     }
-  .caixa-servico_home > div {
-    width: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-left: #fff solid 1px;
-}
-.planos {
+
+    .caixa-servico_home > div {
+        width: 150px;
+        text-align: center;
+        border-left: 1px solid #fff;
+    }
+
+    .planos {
         justify-content: center;
-        overflow-x: visible; 
+        overflow-x: visible;
         gap: 20px;
     }
 
@@ -364,38 +327,30 @@ p {
     .plano_premium {
         min-width: auto;
         width: 190px;
-       
-
     }
-  .sobrenos-home{
-   display: flex;
+
+    .sobrenos-home {
         align-items: center;
         justify-content: center;
         gap: 50px;
-
         max-width: 1000px;
         margin: 40px auto;
+        flex-direction: row;
     }
-    .sobrenos-home img{
+
+    .sobrenos-home img {
         width: 360px;
     }
-    .text_sobrenos{
+
+    .text_sobrenos {
         width: 290px;
         font-size: 17px;
         padding: 18px;
     }
-     .text_sobrenos button{
+
+    .text_sobrenos button {
         font-size: 15px;
         margin-top: 10px;
-     }
-}
-@media(min-width:1024px) {
-    .sobrenos-home{
-        
     }
-    
-    .sobrenos-home img{
-        width: 550px;
+}
 
-    }
-}
